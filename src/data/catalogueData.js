@@ -17,7 +17,7 @@ export const companyDetails = {
   phone: "+91 85120 22050",
   whatsappNumber: "918512022050",
   ceo: "Prashant",
-  gstin: "07JZXPS9316G1ZB",
+  gstin: "06ASEPT8854H1Z7",
   msmeRegistration: "Government Registered under MSME",
   
   // Works & Manufacturing Facility (Gurgaon)
@@ -57,7 +57,7 @@ export const trustHighlights = [
   {
     label: "ACCREDITATION",
     value: "MSME Registered",
-    subtext: "GSTIN: 07JZXPS9316G1ZB"
+    subtext: "GSTIN: 06ASEPT8854H1Z7"
   },
   {
     label: "LOCATIONS",

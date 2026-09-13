@@ -13,7 +13,7 @@ Designed specifically for large corporate procurement teams, automotive OEMs, di
 - **Business Model:** Manufacturer, Supplier & Retailer
 - **Works Facility:** Khasra No. 7684/6329/219, Daultabad, Tek Chand Nagar, Gali No. 12, Gurgaon – 122001, Haryana, India
 - **Registered Office:** C-3/2 Phase-2, Mayapuri Industrial Area, New Delhi – 110064, India
-- **Accreditation:** Government Registered under MSME · GSTIN: `07JZXPS9316G1ZB`
+- **Accreditation:** Government Registered under MSME · GSTIN: `06ASEPT8854H1Z7`
 - **Esteemed Clients & Partners:** Motherson Group, Maa Durga Advance Technologies, PACKMAN, STEERWELS, LOFTO DESIGN, KK INDUSTRIES, BALAJI AUTO PARTS, KRISHNA INDUSTRIES, MACRO MOULDS, Bharat Lighting
 
 ---
