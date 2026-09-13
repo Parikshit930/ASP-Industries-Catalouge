@@ -821,21 +821,21 @@ export const featuredProducts = [
   {
     id: "prod-17",
     index: "17",
-    name: "Specialized Defense Linkage Rods & Internal Threaded Barrels",
+    name: "Precision Slotted Defense Linkage Shafts & Guide Actuator Rods",
     category: "Defense Sector Precision Components",
     categoryId: "turning-cnc-machines",
-    machine: "AMS J300LM & Riat Sons Grinder (350mm)",
-    filterGroups: ["defense", "turning", "tool-room"],
+    machine: "AMS J300LM & HAAS CNC VMC",
+    filterGroups: ["defense", "turning", "tool-room", "vmc"],
     image: "/images/defense-3.jpg",
-    tag: "Tactical Hardware",
-    whatWorkItDoes: "Precision cylindrical barrels and high-vibration linkage rods machined with micro-finished bores, precise metric internal threads, and corrosion-resistant passivation for defense applications.",
+    tag: "Slotted Defense Actuator",
+    whatWorkItDoes: "Precision CNC turned and milled slender defense actuator shafts featuring a central oblong slotted aperture, flanged locating head, and precision drilled internal bore for tactical mechanical linkages and military control mechanisms.",
     typicalWork: [
-      "Armored vehicle mechanical linkages",
-      "High-precision defense sensor housing pins",
-      "Weapon system trigger and pivot pins",
-      "Hardened tactical mounting hardware"
+      "Defense slotted actuator linkages",
+      "Tactical weapon trigger & sear linkage rods",
+      "Armored vehicle mechanical control shafts",
+      "High-fatigue slotted guide pins"
     ],
-    keySpecsNote: "Turned on AMS J300LM · Cylindrical sizing on Riat Sons grinder · Zero-defect defense inspection"
+    keySpecsNote: "Turned on AMS J300LM & slot milled on HAAS VMC · Central slotted aperture · Concentric flanged head"
   }
 ];
 
