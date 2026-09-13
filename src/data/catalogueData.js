@@ -177,13 +177,13 @@ export const inHouseMachinery = [
   },
   {
     type: "Cylindrical Grinding Machine",
-    model: "Hostivar BU-28",
-    brand: "Hostivar",
+    model: "Riat Sons 350mm Cylindrical Grinder",
+    brand: "Riat Sons",
     image: "/images/tool-room.jpg",
     centreHeight: "150 mm",
-    maxJobDia: "290 mm",
-    maxJobLength: "630 mm",
-    workPurpose: "OD/ID precision cylindrical grinding, guide pillar finishing, and mirror-grade shaft sizing."
+    maxJobDia: "200 mm",
+    maxJobLength: "350 mm",
+    workPurpose: "OD/ID precision cylindrical grinding, guide pillar finishing, and mirror-grade shaft sizing up to 350 mm length."
   },
   {
     type: "Precision Surface Grinder",
@@ -392,7 +392,7 @@ export const catalogueCategories = [
     index: "05",
     title: "Tool Room Machines",
     shortDescription: "A range of tool room machinery supporting tooling, die-making, maintenance, and industrial manufacturing requirements.",
-    longDescription: "Our tool room battery includes Hostivar BU-28 cylindrical grinders (630 mm length), Ramana surface grinders, Bhavya and Baljeet universal millers, and Pimco lathes serving die and mould maintenance.",
+    longDescription: "Our tool room battery includes Riat Sons precision cylindrical grinders (350 mm length), Ramana surface grinders, Bhavya and Baljeet universal millers, and Pimco lathes serving die and mould maintenance.",
     whatWorkItDoes: "Tool room machinery constitutes the backbone of precision manufacturing. Surface grinders achieve micron-level flatness on hardened die plates; precision lathes turn cylindrical components, threads, and bushings; and universal millers prepare fixtures, pockets, and tool assemblies.",
     image: "/images/tool-room.jpg",
     isService: false,
@@ -413,10 +413,10 @@ export const catalogueCategories = [
       },
       {
         id: "cylindrical-grinders",
-        name: "Hostivar BU-28 Cylindrical Grinder",
+        name: "Riat Sons Cylindrical Grinder (350mm)",
         image: "/images/product-4.jpg",
-        description: "High-accuracy OD/ID cylindrical grinding for shafts up to 630 mm length and 290 mm diameter.",
-        inquiryScope: "Hostivar cylindrical grinding solutions"
+        description: "High-accuracy OD/ID cylindrical grinding for shafts and guide pillars up to 350 mm length.",
+        inquiryScope: "Riat Sons cylindrical grinding solutions (350 mm length)"
       },
       {
         id: "universal-milling-machines",
@@ -577,18 +577,18 @@ export const featuredProducts = [
     name: "Precision Stepped Tooling Spindle Shaft & Pin",
     category: "Tool Room Machining & Grinding",
     categoryId: "tool-room-machines",
-    machine: "AMS J300LM & Hostivar BU-28",
+    machine: "AMS J300LM & Riat Sons Cylindrical Grinder (350mm)",
     filterGroups: ["turning", "tool-room"],
     image: "/images/product-4.jpg",
-    tag: "AMS Turning & Cylindrical Grinding",
-    whatWorkItDoes: "Multi-stepped hardened tooling shaft turned on AMS J300LM with precision ground ODs on Hostivar BU-28 grinder, featuring cross-drilled oil passage and external threaded clamping end.",
+    tag: "AMS Turning & Riat Sons Grinding",
+    whatWorkItDoes: "Multi-stepped hardened tooling shaft turned on AMS J300LM with precision ground ODs on Riat Sons cylindrical grinder (350 mm length), featuring cross-drilled oil passage and external threaded clamping end.",
     typicalWork: [
       "Tool room guide pins and alignment dowels",
       "Machine spindle shafts and arbor pins",
       "Press die guide pillar components",
       "High-wear industrial hinge pins"
     ],
-    keySpecsNote: "Rough turned on AMS J300LM · Final sizing on Hostivar BU-28 cylindrical grinder (±0.005 mm runout)"
+    keySpecsNote: "Rough turned on AMS J300LM · Final sizing on Riat Sons cylindrical grinder (350 mm length, ±0.005 mm runout)"
   },
   {
     id: "prod-05",
@@ -703,6 +703,82 @@ export const featuredProducts = [
       "Heavy mechanical press toggle bushings"
     ],
     keySpecsNote: "High wear-resistant bronze guide bushing for Toshiba 180Ton moulds · Honed sliding bore"
+  },
+  {
+    id: "prod-11",
+    index: "11",
+    name: "High-Precision Progressive Stamping Die Block Assembly",
+    category: "Die Moulds & Press Tooling",
+    categoryId: "die-products",
+    machine: "HAAS CNC VMC & Tool Room Bay",
+    filterGroups: ["die-moulds", "tool-room", "vmc"],
+    image: "/images/die-mould-1.jpg",
+    tag: "Progressive Die Mould",
+    whatWorkItDoes: "Multi-station progressive stamping die block featuring precision guided slide inserts, hardened punch tooling, stripper plates, and wear-resistant guide pillars for high-speed automated sheet metal stamping.",
+    typicalWork: [
+      "Progressive automotive stamping dies",
+      "Multi-stage sheet metal blanking & piercing",
+      "Precision punch & die insert assemblies",
+      "High-wear hardened tool steel die sets"
+    ],
+    keySpecsNote: "Engineered on HAAS VMC & Tool Room · Hardened tool steel inserts · Micron alignment tolerances"
+  },
+  {
+    id: "prod-12",
+    index: "12",
+    name: "4-Cavity Precision Plastic Injection Mould Cavity Block",
+    category: "Die Moulds & Injection Tooling",
+    categoryId: "plastic-moulding",
+    machine: "HAAS VF2-YT & Siemens NX CAD/CAM",
+    filterGroups: ["die-moulds", "moulding", "vmc"],
+    image: "/images/die-mould-2.jpg",
+    tag: "Injection Mould Tooling",
+    whatWorkItDoes: "High-accuracy 4-cavity plastic injection mould cavity block featuring balanced runner feeds, precision gate orifices, hardened leader pin bushings, and conformal cooling channels for uniform cycle cooling.",
+    typicalWork: [
+      "4-cavity thermoplastic injection moulding",
+      "Precision runner & sprue gating layouts",
+      "Automotive & electrical component moulds",
+      "Optimized water cooling channel layouts"
+    ],
+    keySpecsNote: "3D profile milled on HAAS VF2-YT · Siemens NX Core/Cavity design · Balanced runner flow"
+  },
+  {
+    id: "prod-13",
+    index: "13",
+    name: "Multi-Cavity Mirror-Polished Core & Cavity Mould Set",
+    category: "Die Moulds & Optical Tooling",
+    categoryId: "plastic-moulding",
+    machine: "HAAS VF1 Precision VMC & EDM Bay",
+    filterGroups: ["die-moulds", "moulding", "vmc"],
+    image: "/images/die-mould-3.jpg",
+    tag: "Optical Multi-Cavity Mould",
+    whatWorkItDoes: "Matched core and cavity mould halves featuring multi-impression high-speed 3D VMC milling, micro-spark EDM fine finishing, and mirror-grade cavity polishing for flash-free cosmetic thermoplastic production.",
+    typicalWork: [
+      "Multi-cavity cosmetic & optical housings",
+      "Automotive lens & reflector mould sets",
+      "Precision parting line shut-off surfaces",
+      "Flash-free tight tolerance component moulding"
+    ],
+    keySpecsNote: "Machined on HAAS VF1 (0.006 mm accuracy) · Mirror polished cavities · Zero flash parting line"
+  },
+  {
+    id: "prod-14",
+    index: "14",
+    name: "Complete Multi-Plate Industrial Injection Mould Tool Assembly",
+    category: "Die Moulds & Turnkey Tooling",
+    categoryId: "plastic-moulding",
+    machine: "Toshiba 180T & HAAS VMC Tooling Bay",
+    filterGroups: ["die-moulds", "moulding", "tool-room"],
+    image: "/images/die-mould-4.jpg",
+    tag: "Turnkey Mould Assembly",
+    whatWorkItDoes: "Turnkey multi-plate industrial plastic injection mould assembly complete with precision ground guide pillars, mechanical slider side-action cores, guided ejector return system, and heavy clamping plates.",
+    typicalWork: [
+      "Turnkey injection mould tool sets",
+      "Side-action slider cores for undercut parts",
+      "Heavy-duty die sets for 110T–180T presses",
+      "Complete mould trial & production tooling"
+    ],
+    keySpecsNote: "Built for Toshiba 180Ton & Electronica 110T · Slide core mechanics · Hardened guide pillars"
   }
 ];
 

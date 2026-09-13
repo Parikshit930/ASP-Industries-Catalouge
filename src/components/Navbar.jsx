@@ -39,7 +39,7 @@ export default function Navbar({ onReplayIntro }) {
     { name: 'Home', id: 'hero' },
     { name: 'About', id: 'about' },
     { name: 'Catalogue', id: 'catalogue' },
-    { name: 'Products', id: 'products' },
+    { name: 'Projects & Moulds', id: 'products' },
     { name: 'EDM Job Work', id: 'edm-job-work' },
     { name: 'Contact', id: 'contact' },
   ];

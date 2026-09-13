@@ -79,14 +79,14 @@ export default function ProductShowcaseCarousel() {
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-sm bg-[#3B82C4]" />
               <span className="font-mono text-xs uppercase tracking-[0.22em] text-[#AEB8C2]">
-                MACHINERY & PRODUCT LINEUP · 10 FEATURED UNITS
+                PROJECTS & DIE MOULDS LINEUP · {featuredProducts.length} FEATURED PROJECTS
               </span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#F2F4F5]">
-              Explore Machine Capabilities & Operations
+              Explore Projects, Die Moulds & Capabilities
             </h2>
             <p className="font-sans text-sm sm:text-base text-[#AEB8C2] mt-3 max-w-2xl font-light">
-              Detailed breakdown of what work each machine performs, typical industrial applications, and engineering parameters.
+              Detailed showcase of manufactured die moulds, press tooling, precision turned parts, and batch production components delivered by ASP Industries.
             </p>
           </div>
 
@@ -125,7 +125,8 @@ export default function ProductShowcaseCarousel() {
         {/* Filter Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
           {[
-            { id: 'all', label: 'All 10 Products' },
+            { id: 'all', label: `All Projects (${featuredProducts.length})` },
+            { id: 'die-moulds', label: '⭐ Die Moulds (04)' },
             { id: 'turning', label: 'AMS J300LM Turning' },
             { id: 'moulding', label: 'Toshiba 180T Moulding' },
             { id: 'edm-robo', label: 'Robo Drill ZNC & EDM' },
@@ -144,6 +145,45 @@ export default function ProductShowcaseCarousel() {
               {tab.label}
             </button>
           ))}
+        </div>
+
+        {/* Die Moulds Special Callout Section Banner */}
+        <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-[#3B82C4]/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+          <div className="flex items-start gap-4">
+            <div className="p-3 bg-[#0B1726] border border-[#3B82C4]/40 text-[#3B82C4] shrink-0">
+              <Layers className="w-5 h-5" />
+            </div>
+            <div>
+              <div className="flex items-center gap-2 mb-1">
+                <span className="font-mono text-[11px] uppercase tracking-widest text-[#3B82C4] font-semibold">
+                  FEATURED PROJECT SECTION: DIE MOULDS
+                </span>
+                <span className="font-mono text-[10px] text-emerald-400 px-2 py-0.5 bg-[#0B1726] border border-emerald-500/30">
+                  Tool Room & VMC Output
+                </span>
+              </div>
+              <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
+                Plastic Injection Moulds & Progressive Stamping Die Sets
+              </h3>
+              <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
+                Precision CNC machined core & cavity sets, 4-cavity injection blocks, progressive stamping tooling, and complete turnkey mould assemblies engineered with Siemens NX CAD/CAM and tested on Toshiba 180T presses.
+              </p>
+            </div>
+          </div>
+
+          <button
+            onClick={() => {
+              setActiveFilter('die-moulds');
+              if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+            }}
+            className={`shrink-0 px-4 py-2.5 font-mono text-xs uppercase tracking-wider transition-colors border cursor-pointer ${
+              activeFilter === 'die-moulds'
+                ? 'bg-[#3B82C4] text-white border-[#3B82C4]'
+                : 'bg-[#0B1726] text-[#AEB8C2] hover:text-white border-[#202A33] hover:border-[#3B82C4]'
+            }`}
+          >
+            {activeFilter === 'die-moulds' ? 'Viewing Die Moulds (04)' : 'Filter Die Moulds →'}
+          </button>
         </div>
 
         {/* Scrollable Container with Smooth Touch & Drag */}
@@ -177,7 +217,7 @@ export default function ProductShowcaseCarousel() {
                 {/* Top Badge Indicators */}
                 <div className="absolute top-4 left-4 right-4 flex items-center justify-between z-10">
                   <span className="font-mono text-xs font-bold text-[#3B82C4] px-2.5 py-1 bg-[#0B1726]/90 border border-[#3B82C4]/40 backdrop-blur-md">
-                    UNIT {product.index} / 10
+                    PROJECT {product.index} / {featuredProducts.length}
                   </span>
 
                   <button
@@ -285,7 +325,7 @@ export default function ProductShowcaseCarousel() {
           </div>
           
           <div className="font-mono text-xs text-[#58748D] shrink-0">
-            {filteredProducts.length} Machines In Inventory
+            {filteredProducts.length} Projects In Inventory
           </div>
         </div>
 
@@ -307,7 +347,7 @@ export default function ProductShowcaseCarousel() {
             <div className="px-6 py-4 bg-[#0B1726] border-b border-[#202A33] flex items-center justify-between">
               <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                 <span className="font-mono text-xs text-[#3B82C4] font-bold px-2 py-0.5 bg-[#151C24] border border-[#3B82C4]/40">
-                  UNIT {selectedProduct.index} / 10
+                  PROJECT {selectedProduct.index} / {featuredProducts.length}
                 </span>
                 <span className="font-mono text-xs text-[#AEB8C2] uppercase tracking-wider">
                   {selectedProduct.category}

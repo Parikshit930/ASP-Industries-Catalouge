@@ -24,7 +24,7 @@ Designed specifically for large corporate procurement teams, automotive OEMs, di
 2. **VMC Machining Bay:** USA-built HAAS VF2-YT (8,100 RPM, 1000×510 mm) and HAAS VF1 (0.006 mm accuracy).
 3. **Plastic Moulding Floor:** High-capacity Toshiba 180-Ton and Electronica 110-Ton injection moulding machines.
 4. **EDM Job Work:** High-precision spark erosion in dielectric fluid for intricate cavities and deep ribs.
-5. **Tool Room Bay:** Ramana surface grinder, Hostivar BU-28 cylindrical grinder, universal millers, and Pimco lathes.
+5. **Tool Room Bay:** Ramana surface grinder, Riat Sons cylindrical grinder (350 mm length), universal millers, and Pimco lathes.
 6. **EDM Machines & Robo Drill:** Robo Machines Drill ZNC (0.2–3.0 mm micro-hole driller) & Ecoline CNC Wirecut EDM.
 7. **Turning CNC Machines:** Ace Micromatic AMS J300LM (500 mm turning length) and Galaxy Midas 6 CNC turning centre.
 8. **CAD / CAM Suite:** Siemens NX-10, Cimatron E, AutoCAD, and SolidWorks with direct 3D core & cavity extraction.
