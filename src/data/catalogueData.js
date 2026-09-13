@@ -779,6 +779,63 @@ export const featuredProducts = [
       "Complete mould trial & production tooling"
     ],
     keySpecsNote: "Built for Toshiba 180Ton & Electronica 110T · Slide core mechanics · Hardened guide pillars"
+  },
+  {
+    id: "prod-15",
+    index: "15",
+    name: "Precision CNC Turned Tapered Defense Projectile Sleeves & Nozzles",
+    category: "Defense Sector Precision Components",
+    categoryId: "turning-cnc-machines",
+    machine: "AMS J300LM CNC Turning Centre & HAAS VMC",
+    filterGroups: ["defense", "turning", "tool-room"],
+    image: "/images/defense-1.jpg",
+    tag: "Defense Precision Grade",
+    whatWorkItDoes: "Precision CNC turned tapered cylindrical sleeves and nozzle bodies machined from defense-grade high-tensile alloy steel on the AMS J300LM with tight concentricity tolerances and ground finish.",
+    typicalWork: [
+      "Defense missile / rocket nozzle sleeves",
+      "Aerospace high-pressure fluid delivery nozzles",
+      "Precision tapered tactical hardware bodies",
+      "Specialized armament ordinance components"
+    ],
+    keySpecsNote: "Machined on AMS J300LM · Defense-grade alloy steel · Concentricity within ±0.005 mm · Laboratory certified"
+  },
+  {
+    id: "prod-16",
+    index: "16",
+    name: "High-Tensile Internal Threaded Defense Actuator Pins & Couplers",
+    category: "Defense Sector Precision Components",
+    categoryId: "turning-cnc-machines",
+    machine: "AMS J300LM & Robo Machines Drill ZNC",
+    filterGroups: ["defense", "turning", "edm-robo"],
+    image: "/images/defense-2.jpg",
+    tag: "Defense Threaded Pin",
+    whatWorkItDoes: "High-integrity dual-ended precision defense actuator shafts with internal tapped threads, cross-drilled locking detents, and precision turned ground shank for high-vibration military and tactical mechanisms.",
+    typicalWork: [
+      "Defense mechanism actuator linkages",
+      "Tactical equipment internal threaded couplers",
+      "High-tensile ordinance locking pins",
+      "Cross-drilled fluid pressure relief pins"
+    ],
+    keySpecsNote: "Internal thread pitch verified via optical comparator · Cross-drilled via Robo Drill ZNC · High fatigue strength"
+  },
+  {
+    id: "prod-17",
+    index: "17",
+    name: "Specialized Defense Linkage Rods & Internal Threaded Barrels",
+    category: "Defense Sector Precision Components",
+    categoryId: "turning-cnc-machines",
+    machine: "AMS J300LM & Riat Sons Grinder (350mm)",
+    filterGroups: ["defense", "turning", "tool-room"],
+    image: "/images/defense-3.jpg",
+    tag: "Tactical Hardware",
+    whatWorkItDoes: "Precision cylindrical barrels and high-vibration linkage rods machined with micro-finished bores, precise metric internal threads, and corrosion-resistant passivation for defense applications.",
+    typicalWork: [
+      "Armored vehicle mechanical linkages",
+      "High-precision defense sensor housing pins",
+      "Weapon system trigger and pivot pins",
+      "Hardened tactical mounting hardware"
+    ],
+    keySpecsNote: "Turned on AMS J300LM · Cylindrical sizing on Riat Sons grinder · Zero-defect defense inspection"
   }
 ];
 

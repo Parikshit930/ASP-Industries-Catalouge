@@ -126,6 +126,7 @@ export default function ProductShowcaseCarousel() {
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
           {[
             { id: 'all', label: `All Projects (${featuredProducts.length})` },
+            { id: 'defense', label: '🛡️ Defense (03)' },
             { id: 'die-moulds', label: '⭐ Die Moulds (04)' },
             { id: 'turning', label: 'AMS J300LM Turning' },
             { id: 'moulding', label: 'Toshiba 180T Moulding' },
@@ -138,7 +139,9 @@ export default function ProductShowcaseCarousel() {
               onClick={() => setActiveFilter(tab.id)}
               className={`px-4 py-2 font-mono text-xs uppercase tracking-wider whitespace-nowrap transition-colors rounded-sm cursor-pointer ${
                 activeFilter === tab.id
-                  ? 'bg-[#3B82C4] text-white font-medium shadow-[0_0_15px_rgba(59,130,196,0.3)]'
+                  ? tab.id === 'defense'
+                    ? 'bg-amber-600 text-white font-medium shadow-[0_0_15px_rgba(217,119,6,0.4)]'
+                    : 'bg-[#3B82C4] text-white font-medium shadow-[0_0_15px_rgba(59,130,196,0.3)]'
                   : 'bg-[#151C24] text-[#AEB8C2] hover:text-white border border-[#202A33] hover:border-[#3B82C4]/60'
               }`}
             >
@@ -147,44 +150,118 @@ export default function ProductShowcaseCarousel() {
           ))}
         </div>
 
-        {/* Die Moulds Special Callout Section Banner */}
-        <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-[#3B82C4]/50 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-          <div className="flex items-start gap-4">
-            <div className="p-3 bg-[#0B1726] border border-[#3B82C4]/40 text-[#3B82C4] shrink-0">
-              <Layers className="w-5 h-5" />
-            </div>
-            <div>
-              <div className="flex items-center gap-2 mb-1">
-                <span className="font-mono text-[11px] uppercase tracking-widest text-[#3B82C4] font-semibold">
-                  FEATURED PROJECT SECTION: DIE MOULDS
-                </span>
-                <span className="font-mono text-[10px] text-emerald-400 px-2 py-0.5 bg-[#0B1726] border border-emerald-500/30">
-                  Tool Room & VMC Output
-                </span>
+        {/* Dynamic Sector Callout Banner (Defense & Die Moulds) */}
+        {activeFilter === 'defense' ? (
+          <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-amber-500/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-[#0B1726] border border-amber-500/40 text-amber-400 shrink-0">
+                <Shield className="w-5 h-5" />
               </div>
-              <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
-                Plastic Injection Moulds & Progressive Stamping Die Sets
-              </h3>
-              <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
-                Precision CNC machined core & cavity sets, 4-cavity injection blocks, progressive stamping tooling, and complete turnkey mould assemblies engineered with Siemens NX CAD/CAM and tested on Toshiba 180T presses.
-              </p>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-amber-400 font-semibold">
+                    SPECIALIZED DEFENSE & TACTICAL HARDWARE SECTION
+                  </span>
+                  <span className="font-mono text-[10px] text-amber-300 px-2 py-0.5 bg-[#0B1726] border border-amber-500/30">
+                    High-Tensile Alloy Steel · Lab Certified
+                  </span>
+                </div>
+                <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
+                  Defense Projectile Sleeves, Threaded Actuators & Armament Couplers
+                </h3>
+                <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
+                  High-precision cylindrical components machined on AMS J300LM CNC turning centres and Robo Drill ZNC driller with tight concentricity (±0.005 mm), precision internal metric threading, and 100% optical inspection for defense applications.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href={generateWhatsAppUrl("Defense Component Specification Enquiry")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-amber-600 hover:bg-amber-500 text-white font-mono text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+            >
+              <span>Enquire Defense Scope</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        ) : activeFilter === 'die-moulds' ? (
+          <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-[#3B82C4]/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-[#0B1726] border border-[#3B82C4]/40 text-[#3B82C4] shrink-0">
+                <Layers className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-[#3B82C4] font-semibold">
+                    FEATURED PROJECT SECTION: DIE MOULDS
+                  </span>
+                  <span className="font-mono text-[10px] text-emerald-400 px-2 py-0.5 bg-[#0B1726] border border-emerald-500/30">
+                    Tool Room & VMC Output
+                  </span>
+                </div>
+                <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
+                  Plastic Injection Moulds & Progressive Stamping Die Sets
+                </h3>
+                <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
+                  Precision CNC machined core & cavity sets, 4-cavity injection blocks, progressive stamping tooling, and complete turnkey mould assemblies engineered with Siemens NX CAD/CAM and tested on Toshiba 180T presses.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href={generateWhatsAppUrl("Die Moulds Manufacturing Requirement")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-[#3B82C4] hover:bg-[#4F9BE3] text-white font-mono text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+            >
+              <span>Enquire Die Moulds</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        ) : (
+          <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-[#202A33] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-[#0B1726] border border-[#3B82C4]/40 text-[#3B82C4] shrink-0">
+                <Layers className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-[#3B82C4] font-semibold">
+                    PROJECT SHOWCASE SECTIONS
+                  </span>
+                  <span className="font-mono text-[10px] text-[#AEB8C2] px-2 py-0.5 bg-[#0B1726] border border-[#202A33]">
+                    {featuredProducts.length} Verified Projects
+                  </span>
+                </div>
+                <h3 className="font-display text-base sm:text-lg font-bold text-[#F2F4F5]">
+                  Browse by Specialized Industry: Defense, Die Moulds & Precision Turned Components
+                </h3>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2.5 shrink-0">
+              <button
+                onClick={() => {
+                  setActiveFilter('defense');
+                  if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                }}
+                className="px-3.5 py-2 bg-[#0B1726] border border-amber-500/50 hover:bg-amber-500/10 text-amber-300 font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <span>🛡️ Defense Section (03)</span>
+              </button>
+              <button
+                onClick={() => {
+                  setActiveFilter('die-moulds');
+                  if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                }}
+                className="px-3.5 py-2 bg-[#0B1726] border border-[#3B82C4]/60 hover:bg-[#3B82C4]/10 text-[#3B82C4] font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <span>⭐ Die Moulds (04)</span>
+              </button>
             </div>
           </div>
-
-          <button
-            onClick={() => {
-              setActiveFilter('die-moulds');
-              if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
-            }}
-            className={`shrink-0 px-4 py-2.5 font-mono text-xs uppercase tracking-wider transition-colors border cursor-pointer ${
-              activeFilter === 'die-moulds'
-                ? 'bg-[#3B82C4] text-white border-[#3B82C4]'
-                : 'bg-[#0B1726] text-[#AEB8C2] hover:text-white border-[#202A33] hover:border-[#3B82C4]'
-            }`}
-          >
-            {activeFilter === 'die-moulds' ? 'Viewing Die Moulds (04)' : 'Filter Die Moulds →'}
-          </button>
-        </div>
+        )}
 
         {/* Scrollable Container with Smooth Touch & Drag */}
         <div
