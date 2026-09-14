@@ -784,6 +784,25 @@ export const featuredProducts = [
   {
     id: "prod-15",
     index: "15",
+    name: "Matched Die Set Guide Pillar & Guide Bushing Assembly",
+    category: "Die Moulds & Press Tool Components",
+    categoryId: "die-products",
+    machine: "AMS J300LM CNC & Riat Sons Cylindrical Grinder (350mm)",
+    filterGroups: ["die-moulds", "tool-room", "turning"],
+    image: "/images/die-mould-5.jpg",
+    tag: "Die Guide Pillar & Bushing Set",
+    whatWorkItDoes: "Precision matched hardened die set guide pillar (leader pin) with tapered lead-in nose and mating flanged guide bushing, turned on AMS J300LM and finish ground on Riat Sons cylindrical grinder (350mm) for micron-accurate alignment in stamping dies and injection mould bases.",
+    typicalWork: [
+      "Press tool die set leader pins & guide pillars",
+      "Precision flanged die set guide bushings",
+      "Plastic injection mould base alignment pillars",
+      "High-impact stamping die alignment sets"
+    ],
+    keySpecsNote: "Hardened alloy tool steel · Internal & external precision ground on Riat Sons 350mm grinder · Clearance tolerance ±0.005 mm"
+  },
+  {
+    id: "prod-16",
+    index: "16",
     name: "Precision CNC Turned Tapered Defense Projectile Sleeves & Nozzles",
     category: "Defense Sector Precision Components",
     categoryId: "turning-cnc-machines",
@@ -801,8 +820,8 @@ export const featuredProducts = [
     keySpecsNote: "Machined on AMS J300LM · Defense-grade alloy steel · Concentricity within ±0.005 mm · Laboratory certified"
   },
   {
-    id: "prod-16",
-    index: "16",
+    id: "prod-17",
+    index: "17",
     name: "High-Tensile Internal Threaded Defense Actuator Pins & Couplers",
     category: "Defense Sector Precision Components",
     categoryId: "turning-cnc-machines",
@@ -820,8 +839,8 @@ export const featuredProducts = [
     keySpecsNote: "Internal thread pitch verified via optical comparator · Cross-drilled via Robo Drill ZNC · High fatigue strength"
   },
   {
-    id: "prod-17",
-    index: "17",
+    id: "prod-18",
+    index: "18",
     name: "Precision Slotted Defense Linkage Shafts & Guide Actuator Rods",
     category: "Defense Sector Precision Components",
     categoryId: "turning-cnc-machines",
@@ -839,8 +858,8 @@ export const featuredProducts = [
     keySpecsNote: "Turned on AMS J300LM & slot milled on HAAS VMC · Central slotted aperture · Concentric flanged head"
   },
   {
-    id: "prod-18",
-    index: "18",
+    id: "prod-19",
+    index: "19",
     name: "Precision Stepped Defense Striker & Firing Pin / Guide Needle",
     category: "Defense Sector Precision Components",
     categoryId: "turning-cnc-machines",

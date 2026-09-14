@@ -204,10 +204,10 @@ export default function ProductShowcaseCarousel() {
                   </span>
                 </div>
                 <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
-                  Plastic Injection Moulds & Progressive Stamping Die Sets
+                  Plastic Injection Moulds, Stamping Dies & Guide Pillar Assemblies
                 </h3>
                 <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
-                  Precision CNC machined core & cavity sets, 4-cavity injection blocks, progressive stamping tooling, and complete turnkey mould assemblies engineered with Siemens NX CAD/CAM and tested on Toshiba 180T presses.
+                  Precision CNC machined core & cavity sets, 4-cavity injection blocks, progressive stamping tooling, matched guide pillar/bushing sets, and complete turnkey mould assemblies engineered with Siemens NX CAD/CAM and tested on Toshiba 180T presses.
                 </p>
               </div>
             </div>
