@@ -837,6 +837,25 @@ export const featuredProducts = [
       "High-fatigue slotted guide pins"
     ],
     keySpecsNote: "Turned on AMS J300LM & slot milled on HAAS VMC · Central slotted aperture · Concentric flanged head"
+  },
+  {
+    id: "prod-18",
+    index: "18",
+    name: "Precision Stepped Defense Striker & Firing Pin / Guide Needle",
+    category: "Defense Sector Precision Components",
+    categoryId: "turning-cnc-machines",
+    machine: "AMS J300LM CNC & Riat Sons Cylindrical Grinder (350mm)",
+    filterGroups: ["defense", "turning", "tool-room"],
+    image: "/images/defense-4.jpg",
+    tag: "Defense Striker / Firing Pin",
+    whatWorkItDoes: "Ultra-precision stepped defense striker pin and micro-guidance needle turned on the AMS J300LM and finish ground on Riat Sons cylindrical grinder (350 mm length) featuring a reinforced mounting shank, smooth blended transition radius, and hardened micro-tip for high-impact tactical mechanisms.",
+    typicalWork: [
+      "Tactical weapon firing pins & striker needles",
+      "High-impact ordinance detonator pins",
+      "Micro-stepped precision guidance shafts",
+      "Hardened wear-resistant piercing & punch pins"
+    ],
+    keySpecsNote: "Hardened alloy tool steel · Precision ground on Riat Sons 350mm grinder · Runout within ±0.003 mm · High impact resistance"
   }
 ];
 

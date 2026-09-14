@@ -20,6 +20,9 @@ export default function ProductShowcaseCarousel() {
     return item.filterGroups && item.filterGroups.includes(activeFilter);
   });
 
+  const defenseCount = featuredProducts.filter((item) => item.filterGroups?.includes('defense')).length;
+  const dieMouldsCount = featuredProducts.filter((item) => item.filterGroups?.includes('die-moulds')).length;
+
   const checkScroll = () => {
     if (!scrollRef.current) return;
     const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
@@ -126,8 +129,8 @@ export default function ProductShowcaseCarousel() {
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
           {[
             { id: 'all', label: `All Projects (${featuredProducts.length})` },
-            { id: 'defense', label: '🛡️ Defense (03)' },
-            { id: 'die-moulds', label: '⭐ Die Moulds (04)' },
+            { id: 'defense', label: `🛡️ Defense (${defenseCount.toString().padStart(2, '0')})` },
+            { id: 'die-moulds', label: `⭐ Die Moulds (${dieMouldsCount.toString().padStart(2, '0')})` },
             { id: 'turning', label: 'AMS J300LM Turning' },
             { id: 'moulding', label: 'Toshiba 180T Moulding' },
             { id: 'edm-robo', label: 'Robo Drill ZNC & EDM' },
@@ -167,10 +170,10 @@ export default function ProductShowcaseCarousel() {
                   </span>
                 </div>
                 <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
-                  Defense Projectile Sleeves, Threaded Actuators & Armament Couplers
+                  Defense Projectile Sleeves, Threaded Actuators, Striker Pins & Armament Couplers
                 </h3>
                 <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
-                  High-precision cylindrical components machined on AMS J300LM CNC turning centres and Robo Drill ZNC driller with tight concentricity (±0.005 mm), precision internal metric threading, and 100% optical inspection for defense applications.
+                  High-precision cylindrical components machined on AMS J300LM CNC turning centres, Riat Sons cylindrical grinder (350mm), and Robo Drill ZNC with tight concentricity (±0.003 mm), precision internal metric threading, and 100% optical inspection for defense applications.
                 </p>
               </div>
             </div>
@@ -248,7 +251,7 @@ export default function ProductShowcaseCarousel() {
                 }}
                 className="px-3.5 py-2 bg-[#0B1726] border border-amber-500/50 hover:bg-amber-500/10 text-amber-300 font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer"
               >
-                <span>🛡️ Defense Section (03)</span>
+                <span>🛡️ Defense Section ({defenseCount.toString().padStart(2, '0')})</span>
               </button>
               <button
                 onClick={() => {
@@ -257,7 +260,7 @@ export default function ProductShowcaseCarousel() {
                 }}
                 className="px-3.5 py-2 bg-[#0B1726] border border-[#3B82C4]/60 hover:bg-[#3B82C4]/10 text-[#3B82C4] font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer"
               >
-                <span>⭐ Die Moulds (04)</span>
+                <span>⭐ Die Moulds ({dieMouldsCount.toString().padStart(2, '0')})</span>
               </button>
             </div>
           </div>
