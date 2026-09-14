@@ -39,8 +39,8 @@ export const companyDetails = {
   },
 
   // Verified Google Maps embed URL
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d12002.29402637812!2d76.99217439304628!3d28.482076247903525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sKhasara%20No.%207684%2F6329%2F219%2C%20Daultabad%2C%20Tek%20Chand%20Nagar%2C%20Gali%20No.%2012%2C%20Gurgaon%20%E2%80%93%20122001%2C%20Haryana%2C%20India!5e1!3m2!1sen!2sin!4v1789116943288!5m2!1sen!2sin", 
-  googleMapsQueryUrl: "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent("Khasara No. 7684/6329/219, Daultabad, Tek Chand Nagar, Gali No. 12, Gurgaon – 122001, Haryana, India")
+  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5413104111603!2d76.9987877!3d28.4882328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03efaf568e2d%3A0x7298076623830802!2sASP%20Industries!5e1!3m2!1sen!2sin!4v1789385565423!5m2!1sen!2sin", 
+  googleMapsQueryUrl: "https://www.google.com/maps?cid=8257321526685468674"
 };
 
 export const trustHighlights = [
