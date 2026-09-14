@@ -14,7 +14,7 @@ export default function GoogleMapEmbed({ compact = false, title = "VISIT ASP IND
   const [mapTheme, setMapTheme] = useState('dark'); // 'dark' or 'default'
   const hasEmbedUrl = Boolean(GOOGLE_MAPS_EMBED_URL && GOOGLE_MAPS_EMBED_URL.trim().length > 0);
 
-  const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(companyDetails.address.full)}`;
+  const directionsUrl = companyDetails.directionsUrl || `https://www.google.com/maps/dir/?api=1&destination=28.4882328,76.9962128`;
 
   return (
     <div className="w-full relative overflow-hidden border border-[#202A33] bg-[#151C24] shadow-[0_15px_35px_rgba(0,0,0,0.4)]">

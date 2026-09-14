@@ -88,7 +88,7 @@ export default function Footer() {
               </div>
               <div className="pt-1">
                 <a
-                  href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(companyDetails.address.full)}`}
+                  href={companyDetails.directionsUrl || 'https://www.google.com/maps/dir/?api=1&destination=28.4882328,76.9962128'}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-[11px] text-[#3B82C4] hover:text-[#4F9BE3] transition-colors uppercase tracking-wider"
