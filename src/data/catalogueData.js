@@ -39,7 +39,7 @@ export const companyDetails = {
   },
 
   // Verified Google Maps embed URL
-  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5413104111603!2d76.9987877!3d28.4882328!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03efaf568e2d%3A0x7298076623830802!2sASP%20Industries!5e1!3m2!1sen!2sin!4v1789385565423!5m2!1sen!2sin", 
+  googleMapsEmbedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.5413112776628!2d76.99621277577961!3d28.488232775743818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03efaf568e2d%3A0x7298076623830802!2sASP%20Industries!5e1!3m2!1sen!2sin!4v1789386125039!5m2!1sen!2sin", 
   googleMapsQueryUrl: "https://www.google.com/maps?cid=8257321526685468674"
 };
 
