@@ -636,7 +636,7 @@ export const featuredProducts = [
     category: "VMC Milling (HAAS CNC)",
     categoryId: "vmc-machines",
     machine: "HAAS VF2-YT High-Rigidity VMC",
-    filterGroups: ["vmc"],
+    filterGroups: ["vmc", "automotive"],
     image: "/images/product-7.jpg",
     tag: "HAAS VF2-YT VMC Machining",
     whatWorkItDoes: "Precision CNC turned and milled circular wheel spacer and hub adapter plate featuring a large center bore and dual bolt circles with counterbored socket holes machined on HAAS VF2-YT VMC.",
@@ -875,6 +875,44 @@ export const featuredProducts = [
       "Hardened wear-resistant piercing & punch pins"
     ],
     keySpecsNote: "Hardened alloy tool steel · Precision ground on Riat Sons 350mm grinder · Runout within ±0.003 mm · High impact resistance"
+  },
+  {
+    id: "prod-20",
+    index: "20",
+    name: "Precision Involute Spline Automotive Drive & PTO Transmission Shaft",
+    category: "Automotive Transmission & Drivetrain Components",
+    categoryId: "turning-cnc-machines",
+    machine: "AMS J300LM CNC Turning & Riat Sons Cylindrical Grinder (350mm)",
+    filterGroups: ["automotive", "turning", "tool-room"],
+    image: "/images/automotive-1.jpg",
+    tag: "Automotive Spline Drive Shaft",
+    whatWorkItDoes: "Multi-stepped automotive transmission and PTO drive shaft featuring high-torque involute external splines on dual ends, precision ground bearing journals, longitudinal keyway slot, and retaining circlip grooves turned on AMS J300LM and finish ground on Riat Sons cylindrical grinder (350mm).",
+    typicalWork: [
+      "Automotive drivetrain & PTO propeller shafts",
+      "Gearbox input/output splined shafts",
+      "Heavy commercial vehicle axle transmission shafts",
+      "Multi-step precision ground bearing journals"
+    ],
+    keySpecsNote: "Hardened alloy steel (EN24 / 20MnCr5) · Involute spline hobbing & grinding · Journal runout < 0.005 mm"
+  },
+  {
+    id: "prod-21",
+    index: "21",
+    name: "Integral Pinion Gear & Splined Automotive Transmission Countershaft",
+    category: "Automotive Powertrain & Gearbox Components",
+    categoryId: "turning-cnc-machines",
+    machine: "AMS J300LM CNC, Robo Drill ZNC & HAAS VMC",
+    filterGroups: ["automotive", "turning", "edm-robo", "vmc"],
+    image: "/images/automotive-2.jpg",
+    tag: "Automotive Transmission Gear Shaft",
+    whatWorkItDoes: "Heavy-duty automotive transmission countershaft featuring an integral precision-machined center spur gear, dual involute splined engagement sections, axial lubrication pass-through bore, and radial oil feed ports drilled on Robo Machines Drill ZNC.",
+    typicalWork: [
+      "Automotive & commercial gearbox countershafts",
+      "Differential intermediate pinion drive shafts",
+      "Internal lubrication oil-feed transmission shafts",
+      "Heavy equipment power transfer shafts"
+    ],
+    keySpecsNote: "Case hardened alloy steel (8620 / 16MnCr5) · Integrated gear tooth profile · Axial & radial lubrication ports via Robo Drill ZNC"
   }
 ];
 

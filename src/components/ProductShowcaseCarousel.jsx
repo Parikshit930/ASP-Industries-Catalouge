@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ChevronLeft, ChevronRight, ArrowRight, MessageSquare, Wrench, Layers, Maximize2, X, Sparkles, CheckCircle2, Shield } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight, MessageSquare, Wrench, Layers, Maximize2, X, Sparkles, CheckCircle2, Shield, Car } from 'lucide-react';
 import { featuredProducts, generateWhatsAppUrl, companyDetails } from '../data/catalogueData';
 
 export default function ProductShowcaseCarousel() {
@@ -20,6 +20,7 @@ export default function ProductShowcaseCarousel() {
     return item.filterGroups && item.filterGroups.includes(activeFilter);
   });
 
+  const automotiveCount = featuredProducts.filter((item) => item.filterGroups?.includes('automotive')).length;
   const defenseCount = featuredProducts.filter((item) => item.filterGroups?.includes('defense')).length;
   const dieMouldsCount = featuredProducts.filter((item) => item.filterGroups?.includes('die-moulds')).length;
 
@@ -129,6 +130,7 @@ export default function ProductShowcaseCarousel() {
         <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-6 scrollbar-none">
           {[
             { id: 'all', label: `All Projects (${featuredProducts.length})` },
+            { id: 'automotive', label: `🚗 Automotive (${automotiveCount.toString().padStart(2, '0')})` },
             { id: 'defense', label: `🛡️ Defense (${defenseCount.toString().padStart(2, '0')})` },
             { id: 'die-moulds', label: `⭐ Die Moulds (${dieMouldsCount.toString().padStart(2, '0')})` },
             { id: 'turning', label: 'AMS J300LM Turning' },
@@ -144,6 +146,8 @@ export default function ProductShowcaseCarousel() {
                 activeFilter === tab.id
                   ? tab.id === 'defense'
                     ? 'bg-amber-600 text-white font-medium shadow-[0_0_15px_rgba(217,119,6,0.4)]'
+                    : tab.id === 'automotive'
+                    ? 'bg-sky-600 text-white font-medium shadow-[0_0_15px_rgba(2,132,199,0.4)]'
                     : 'bg-[#3B82C4] text-white font-medium shadow-[0_0_15px_rgba(59,130,196,0.3)]'
                   : 'bg-[#151C24] text-[#AEB8C2] hover:text-white border border-[#202A33] hover:border-[#3B82C4]/60'
               }`}
@@ -153,8 +157,42 @@ export default function ProductShowcaseCarousel() {
           ))}
         </div>
 
-        {/* Dynamic Sector Callout Banner (Defense & Die Moulds) */}
-        {activeFilter === 'defense' ? (
+        {/* Dynamic Sector Callout Banner (Automotive, Defense & Die Moulds) */}
+        {activeFilter === 'automotive' ? (
+          <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-sky-500/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg">
+            <div className="flex items-start gap-4">
+              <div className="p-3 bg-[#0B1726] border border-sky-500/40 text-sky-400 shrink-0">
+                <Car className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <span className="font-mono text-[11px] uppercase tracking-widest text-sky-400 font-semibold">
+                    SPECIALIZED AUTOMOTIVE & DRIVETRAIN SECTION
+                  </span>
+                  <span className="font-mono text-[10px] text-sky-300 px-2 py-0.5 bg-[#0B1726] border border-sky-500/30">
+                    OEM Standards · Motherson & Tier-1 Grade
+                  </span>
+                </div>
+                <h3 className="font-display text-lg sm:text-xl font-bold text-[#F2F4F5]">
+                  Automotive Transmission Shafts, Splined PTO Axles & Hub Spacers
+                </h3>
+                <p className="font-sans text-xs sm:text-sm text-[#AEB8C2] font-light mt-1 max-w-3xl">
+                  High-durability powertrain shafts, involute splined countershafts, integral pinion gears, and CNC milled wheel spacers machined on AMS J300LM CNC Turning, HAAS VMC, and precision ground on Riat Sons cylindrical grinder for automotive and commercial vehicle transmission assemblies.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href={generateWhatsAppUrl("Automotive Components Specification Enquiry")}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-sky-600 hover:bg-sky-500 text-white font-mono text-xs uppercase tracking-wider transition-colors shadow-sm cursor-pointer"
+            >
+              <span>Enquire Automotive Scope</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        ) : activeFilter === 'defense' ? (
           <div className="mb-8 p-5 sm:p-6 bg-[#151C24] border border-amber-500/60 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 shadow-lg">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-[#0B1726] border border-amber-500/40 text-amber-400 shrink-0">
@@ -238,12 +276,21 @@ export default function ProductShowcaseCarousel() {
                   </span>
                 </div>
                 <h3 className="font-display text-base sm:text-lg font-bold text-[#F2F4F5]">
-                  Browse by Specialized Industry: Defense, Die Moulds & Precision Turned Components
+                  Browse by Specialized Industry: Automotive, Defense, Die Moulds & Precision Turned Components
                 </h3>
               </div>
             </div>
 
-            <div className="flex items-center gap-2.5 shrink-0">
+            <div className="flex items-center gap-2.5 shrink-0 flex-wrap">
+              <button
+                onClick={() => {
+                  setActiveFilter('automotive');
+                  if (scrollRef.current) scrollRef.current.scrollTo({ left: 0, behavior: 'smooth' });
+                }}
+                className="px-3.5 py-2 bg-[#0B1726] border border-sky-500/50 hover:bg-sky-500/10 text-sky-300 font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-1.5 cursor-pointer"
+              >
+                <span>🚗 Automotive ({automotiveCount.toString().padStart(2, '0')})</span>
+              </button>
               <button
                 onClick={() => {
                   setActiveFilter('defense');
